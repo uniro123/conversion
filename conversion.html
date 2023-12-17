@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Rem Conversion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background">
+        <div class="container">
+
+
+            <div class="head">
+                <button onclick="showConversion()">
+                    Number Conversion
+                </button>
+                <button onclick="showCalculator()">
+                    Calculator
+                </button>
+                <button onclick="signOut()" id="out">
+                    Sign Out
+                </button>
+            </div>
+
+            <div id="conversion" class="popup">
+                <div class="conversionPage">
+
+                    <div>
+                        <h1>REM CONVERSION</h1>
+                    </div>
+                    <div class="line"></div>
+
+                    <div>
+                        <p class="text">From</p>
+                    </div>
+
+                    <div class="custom-select">
+                        <select class="choices" id="fromBase">
+                            <option value="binary">Binary</option>
+                            <option value="decimal">Decimal</option>
+                            <option value="octal">Octal</option>
+                            <option value="hexadecimal">Hexadecimal</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <p class="text">To</p>
+                    </div>
+
+                    <div class="custom-select">
+                        <select class="choices" id="toBase">
+                            <option value="binary">Binary</option>
+                            <option value="decimal" selected="Decimal">Decimal</option>
+                            <option value="octal">Octal</option>
+                            <option value="hexadecimal">Hexadecimal</option>
+                        </select>
+                    </div>
+
+                    <div class="line"></div>
+
+                    <div>
+                        <input type="text" placeholder="Enter a number to convert" class="input" id="numberToConvert">
+                    </div>
+
+                    <div>
+                        <button class="click" onclick="convertPlease()">Convert</button>
+                    </div>
+
+                    <div>
+                        <button class="click" onclick="resetFields()">Reset</button>
+                    </div>
+
+                    <div>
+                        <button class="click" onclick="swapBases()">Swap</button>
+                    </div>
+
+                    <div>
+                        <textarea class="result" placeholder="Result" readonly id="conversionResult"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CALCULATOR HERE IN THIS SECTION -->
+        <div id="calculator" class="popup">
+            <div class="container-calculator">
+                <div class="calcbox">
+
+                    <div>
+                        <h1>REM CALCULATOR</h1>
+                    </div>
+
+                    <div>
+                        <input type="text" id="inputnum" class="numbers" placeholder="0" readonly>
+                    </div>
+
+                    <div>
+                        <button onclick="numberInput('%')" class="sign1">%</button>
+                        <button onclick="squaredInput('^')" class="sign1">x²</button>
+                        <button onclick="clearInput()" class="sign1">C</button>
+                        <button onclick="deleteInput()" class="sign1">DEL</button>
+                    </div>
+
+                    <div>
+                        <button onclick="numberInput('7')" class="number">7</button>
+                        <button onclick="numberInput('8')" class="number">8</button>
+                        <button onclick="numberInput('9')" class="number">9</button>
+                        <button onclick="numberInput('/')" class="sign">/</button>
+                    </div>
+
+                    <div>
+                        <button onclick="numberInput('4')" class="number">4</button>
+                        <button onclick="numberInput('5')" class="number">5</button>
+                        <button onclick="numberInput('6')" class="number">6</button>
+                        <button onclick="numberInput('*')" class="sign">x</button>
+                    </div>
+
+                    <div>
+                        <button onclick="numberInput('1')" class="number">1</button>
+                        <button onclick="numberInput('2')" class="number">2</button>
+                        <button onclick="numberInput('3')" class="number">3</button>
+                        <button onclick="numberInput('-')" class="sign">-</button>
+                    </div>
+
+                    <div>
+                        <button onclick="changeInput()" class="sign1">+/-</button>
+                        <button onclick="numberInput('0')" class="number">0</button>
+                        <button onclick="numberInput('.')" class="point">.</button>
+                        <button onclick="numberInput('+')" class="sign">+</button>
+                    </div>
+
+                    <div>
+                        <button onclick="theResult()" class="equal">=</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="convert.js"></script>
+</body>
+
+</html>

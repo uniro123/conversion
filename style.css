@@ -1,0 +1,361 @@
+@import url('http://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to left,#1b262c, #3991c5, #3991c5, #3991c5, #1b262c);
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;  
+}
+
+.head {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 50px;
+    gap: 10px;
+}
+.head>button:nth-child(1) {
+    grid-column: span 2;
+    cursor: pointer;
+}
+.head>button:nth-child(2) {
+    grid-column: span 2;
+    cursor: pointer;
+}
+.head>button:nth-child(3){
+    grid-column: span 4;
+    cursor: pointer;
+}
+.head button {
+    background: rgba(27, 38, 44, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(27, 38, 44, 0.32);
+    color: #BBE1FA;
+}
+
+.conversionPage {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 2px solid #FAEED1;
+    padding: 20px;
+    margin: 20px;
+    background: rgba(27, 38, 44, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(27, 38, 44, 0.32);
+    animation-name: floatAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    gap: 5px;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+.conversionPage>div:nth-child(1) {
+    grid-column: span 4;
+}
+.conversionPage>div:nth-child(2) {
+    grid-column: span 4;
+}
+
+.conversionPage>div:nth-child(7) {
+    grid-column: span 4;
+}
+
+.conversionPage>div:nth-child(8) {
+    grid-column: span 4;
+}
+
+.conversionPage>div:nth-child(9) {
+    grid-column: span 2;
+}
+
+.conversionPage>div:nth-child(10) {
+    grid-column: span 2;
+}
+
+.conversionPage>div:nth-child(11) {
+    grid-column: span 4;
+}
+.conversionPage>div:nth-child(12) {
+    grid-column: span 4;
+}
+
+p,
+select,
+button {
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #F3EEEA;
+    text-align: center;
+    font-weight: 700;
+    border: none;
+    border-radius: 3%;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+}
+input,
+textarea {
+    text-transform: uppercase;
+    margin: 5px 0;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #F3EEEA;
+    text-align: center;
+    font-weight: 700;
+    border: none;
+    border-radius: 3%;
+    font-family: 'Poppins', sans-serif;
+    resize: none;
+}
+.text {
+    color: #1B262C;
+}
+
+.click,
+.choices,
+.input,
+.result {
+    color: #BBE1FA;
+    text-align: center;
+    background: rgba(27, 38, 44, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(27, 38, 44, 0.32);
+    font-weight: 500;
+}
+
+::placeholder {
+    color: #BBE1FA;
+    text-transform: none;
+}
+
+.line {
+    border: 1px solid #1B262C;
+}
+select {
+    width: 200px;
+    text-align: start;
+}
+
+input:focus {
+    outline: 1px solid #BBE1FA;
+}
+
+select:focus {
+    outline: 1px solid #BBE1FA;
+}
+
+.result:focus {
+    outline: 1px solid #BBE1FA;
+}
+
+@media screen and (max-width: 600px) {
+
+    .head {
+        display: grid;
+    }
+    
+    .head>button:nth-child(1) {
+    grid-column: span 4;
+}
+
+.head>button:nth-child(2) {
+    grid-column: span 4;
+}
+    
+    .conversionPage {
+        display: grid;
+    }
+    select{
+        width: 100%;
+    }
+    .conversionPage>div:nth-child(1) {
+        grid-column: span 4;
+    }
+
+    .conversionPage>div:nth-child(2) {
+        grid-column: span 4;
+        
+    }
+
+    .conversionPage>div:nth-child(3) {
+        grid-column: span 4;
+    }
+
+    .conversionPage>div:nth-child(4) {
+        grid-column: span 4;
+        
+    }
+
+    .conversionPage>div:nth-child(5) {
+        grid-column: span 4;
+    }
+    .conversionPage>div:nth-child(6) {
+    grid-column: span 4;
+}
+
+}
+
+/* CALCULATOR STYLE HERE */
+
+.container-calculator {
+    max-width: 380px;
+    margin: 0 auto;      
+}
+
+.calcbox {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 2px solid #FAEED1;
+    padding: 20px;    
+    margin-bottom: 100px;
+    background: rgba(27, 38, 44, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(27, 38, 44, 0.32);
+    justify-items: center;
+    animation-name: floatAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+h1 {
+    font-weight: 700;
+    text-align: center;
+    color: #0F4C75;
+    font-size: 1.5rem;
+    margin: 5px 0px 5px 0px;
+}
+.numbers {
+    height: 70px;
+    width: 290px;
+    font-weight: 500;
+    border: none;
+    text-align: end;
+    font-size: 40px;  
+    margin: 10px 0px 10px 0px;
+    color: #BBAB8C;
+    background: rgba(27, 38, 44, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(27, 38, 44, 0.32);
+}
+.sign,
+.sign1,
+.number,
+.point{  
+    border-radius: 5%;
+    height: 60px;
+    width: 60px;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    gap: 60px;
+    color: #BBE1FA;
+    background: rgba(27, 38, 44, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(27, 38, 44, 0.32);
+}
+
+.numbers {
+    color: #BBE1FA;
+}
+
+.equal {    
+    background: rgba(27, 38, 44, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(27, 38, 44, 0.32);
+    height: 62px;
+    width: 290px;
+    color: #BBE1FA;
+    margin: 10px 0px 10px 0px;
+}
+
+.calcbox > div:nth-child(1){
+    grid-column: span 4;
+}
+.calcbox > div:nth-child(2){
+    grid-column: span 4;
+}
+.calcbox > div:nth-child(3){
+    grid-column: span 4;
+}
+.calcbox > div:nth-child(4){
+    grid-column: span 4;
+}
+.calcbox > div:nth-child(5){
+    grid-column: span 4;
+}
+.calcbox > div:nth-child(6){
+    grid-column: span 4;
+}
+.calcbox > div:nth-child(7){
+    grid-column: span 4;
+}
+.calcbox > div:nth-child(8){
+    grid-column: span 4;
+}
+
+button:hover {
+    background-color: #0F4C75;
+    transform: scale(1.05);
+    transition: 0.4s;
+}
+.popup {
+    display: none;
+    animation: fadeInOut 0.7s ease-in-out, popInOut 0.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popInOut {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}

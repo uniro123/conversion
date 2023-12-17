@@ -1,0 +1,175 @@
+@import url('https//fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to left, #1b262c, #3991c5, #1b262c);
+}
+
+.login-container {
+    width: 300px;
+    margin: 150px auto;
+    align-items: center;
+    background: rgba(27, 38, 44, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(27, 38, 44, 0.32);
+    animation: fadeInOut 0.7s ease-in-out, popInOut 0.5s ease-in-out;
+}
+
+@keyframes fadeInOut {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes popInOut {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+} 
+
+.login-form {
+    display: grid;
+    grid-template-columns: repeat (4, 1fr);
+    color: #1B262C;
+}
+
+h2 {
+    text-align: center;
+    color: #1B262C;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.login-form > h2:nth-child(1) {
+    grid-column: span 4;
+}
+div .line {
+    border: 1px solid #1b262c;
+    grid-column: span 4;
+    margin: 0px 20px 15px 20px;
+}
+
+label {
+    grid-column: 3/span 2;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+input {
+    grid-column: 3/span 2;
+    width: 200px;
+    padding: 18px;
+    margin-top: 5px;
+    background: rgba(27, 38, 44, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(27, 38, 44, 0.32);
+    color: #BBE1FA;
+    font-weight: 700;    
+}
+
+input:focus{
+    outline: 1px solid #BBE1FA;
+}
+
+::placeholder {
+    color: #BBE1FA;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+button {
+    grid-column: span 4;
+    background: rgba(27, 38, 44, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    border: 1px solid rgba(27, 38, 44, 0.32);
+    color: #BBE1FA;
+    padding: 18px;
+    cursor: pointer;
+    width: 150px;
+    margin: 30px auto;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+p {
+    text-align: center;
+}
+
+#errorMessage {
+    font-weight: 900;
+}
+
+button:hover {
+    background: #1b262c;
+    transform: scale(1.05);
+    transition: 0.6s;
+}
+#loadingScreen p {
+    position: relative;
+    top: 125px;
+    left: 12px;
+    animation-name: floatAnimation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#loadingScreen {
+    margin: 250px auto;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    display: none;
+}
+
+#loadingScreen:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid black;
+    border-color: black transparent black transparent;
+    animation: loading 1.2s linear infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
