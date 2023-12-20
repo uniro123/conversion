@@ -10,13 +10,35 @@ function showConversion() {
 
 
 function signOut() {
-    var confirmSignOut = confirm("Are you sure you want to sign out?");
-    
-    if (confirmSignOut) {
-        window.open("index.html");
-        window.close("conversion.html")
-    }
+    Swal.fire({
+        title: "Are you sure?",
+        text: "If you do, you need to log in again!",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonColor: "#00ADB5",
+        cancelButtonColor: "#393E46",
+        confirmButtonText: "Log Out",
+        background: "#222831",
+        color: "#EEEEEE",
+        iconColor: "#00ADB5"
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire({
+                title: "Logging Out!",
+                text: "Please, come back again!",
+                icon: "success",
+                background: "#222831",
+                color: "#EEEEEE",
+                iconColor: "#00ADB5",
+                confirmButtonColor: "#00ADB5"
+            }).then(() => {
+                window.open("index.html"); 
+                window.close("conversion.html");
+            });
+        }
+    });
 }
+
 
 
 function convertPlease() {
