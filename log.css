@@ -63,12 +63,14 @@ label {
     grid-column: 3/span 2;
     margin-top: 10px;
     font-weight: 700;
+    font-size: 15px;
 }
-
-input {
+span {
     grid-column: 3/span 2;
+}
+input {
     width: 200px;
-    padding: 18px;
+    padding: 13px;
     margin-top: 5px;
     background: rgba(27, 38, 44, 0.27);
     border-radius: 16px;
@@ -87,7 +89,21 @@ input:focus{
 ::placeholder {
     color: #BBE1FA;
     font-weight: 500;
-    text-transform: uppercase;
+}
+
+.login-form span {
+    position: relative;
+}
+
+.login-form input {
+    padding-left: 30px; /* Adjust the padding as needed */
+}
+
+.login-form i {
+    position: absolute;
+    left: 10px; /* Adjust the left position as needed */
+    top: 55%;
+    transform: translateY(-55%);
 }
 
 button {
@@ -99,7 +115,7 @@ button {
     -webkit-backdrop-filter: blur(0px);
     border: 1px solid rgba(27, 38, 44, 0.32);
     color: #BBE1FA;
-    padding: 18px;
+    padding: 13px;
     cursor: pointer;
     width: 150px;
     margin: 30px auto;
