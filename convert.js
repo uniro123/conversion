@@ -122,7 +122,7 @@ function numberInput(value) {
 }
 
 function squaredInput() {
-    inputnum.value.innerHTML = "^";
+    inputnum.value = inputnum.value * inputnum.value;
     
 }
 
